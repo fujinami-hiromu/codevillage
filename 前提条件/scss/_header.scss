@@ -1,0 +1,93 @@
+header {
+    font-family: "Roboto Mono for Powerline";
+    padding-top: 6.8rem;
+    display: flex;
+    justify-content: start;
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    @include sp {
+        height: 7rem;
+        align-items: center;
+        background-color: white;
+        justify-content: space-between;
+        padding-top: unset;
+        position: unset;
+    }
+}
+
+
+
+.hd-logo-wrap {
+    padding-left: 6%;
+    width: 27%;
+    min-width: 358px;
+  }
+
+.hd-logo {
+    font-size: 3.8rem;
+    @include sp {
+      font-size: 2.7rem;
+    }
+}
+
+nav {
+    width: 30%;
+    min-width: 422px;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    @include tab {
+        display: none;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.8rem;
+    }
+
+}
+
+li:first-child {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 17%;
+        display: inline-block;
+        width: 85%;
+        height: 0.1rem;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-55%);/*位置調整*/
+        background-color: black;/*線の色*/
+        border-radius: 2px;/*線の丸み*/
+    }
+}
+  
+li:not(:first-child) {
+    color: #707070;
+}
+  
+.ham {
+    display: none;
+    @include tab {
+        width: 16px;
+        height: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        right: 5%;
+        span {
+            display: inline-block;
+            width: 100%;
+            height: 1px;
+            background-color: #3B4043;
+        }
+        .ham-last {
+            width: 80%;
+        }
+    }
+}

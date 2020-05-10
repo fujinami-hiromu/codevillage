@@ -1,0 +1,554 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 12px;
+  line-height: 1.67;
+}
+
+.inner {
+  width: 84%;
+  padding-bottom: 4.5rem;
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-top: 26rem;
+  font-size: 1.8rem;
+  color: #707070;
+}
+@media screen and (max-width: 600px) {
+  .title {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+.title:after {
+  display: inline-block;
+  content: "";
+  border-top: 1px solid;
+  width: 4.5em;
+  margin-left: 2rem;
+}
+
+header {
+  font-family: "Roboto Mono for Powerline";
+  padding-top: 6.8rem;
+  display: flex;
+  justify-content: start;
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+@media screen and (max-width: 600px) {
+  header {
+    height: 7rem;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between;
+    padding-top: unset;
+    position: unset;
+  }
+}
+
+.hd-logo-wrap {
+  padding-left: 6%;
+  width: 27%;
+  min-width: 358px;
+}
+
+.hd-logo {
+  font-size: 3.8rem;
+}
+@media screen and (max-width: 600px) {
+  .hd-logo {
+    font-size: 2.7rem;
+  }
+}
+
+nav {
+  width: 30%;
+  min-width: 422px;
+  padding-left: 2rem;
+  padding-top: 2rem;
+}
+@media screen and (max-width: 959px) {
+  nav {
+    display: none;
+  }
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+li:first-child {
+  position: relative;
+}
+li:first-child::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 17%;
+  display: inline-block;
+  width: 85%;
+  height: 0.1rem;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-55%);
+  /*位置調整*/
+  background-color: black;
+  /*線の色*/
+  border-radius: 2px;
+  /*線の丸み*/
+}
+
+li:not(:first-child) {
+  color: #707070;
+}
+
+.ham {
+  display: none;
+}
+@media screen and (max-width: 959px) {
+  .ham {
+    width: 16px;
+    height: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    right: 5%;
+  }
+  .ham span {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #3B4043;
+  }
+  .ham .ham-last {
+    width: 80%;
+  }
+}
+
+.first-view {
+  width: 100%;
+  height: 80rem;
+}
+
+.fv-wrap {
+  display: flex;
+  height: 80rem;
+}
+@media screen and (max-width: 959px) {
+  .fv-wrap {
+    height: auto;
+  }
+}
+
+.fv-wrap-text {
+  width: 46%;
+  position: relative;
+}
+@media screen and (max-width: 600px) {
+  .fv-wrap-text {
+    display: none;
+  }
+}
+.fv-wrap-text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 54%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media screen and (max-width: 600px) {
+  .fv-wrap-text-box {
+    color: white;
+    top: 44%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    width: 68%;
+    height: 17%;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    z-index: 10;
+  }
+}
+
+.fv-title_1 {
+  font-family: "ヒラギノ明朝 Pro", serif;
+  font-size: 3rem;
+  padding-left: 2rem;
+  text-align: center;
+}
+.fv-title_2 {
+  font-family: "Zapfino", cursive;
+  font-size: 3.8rem;
+  text-align: center;
+}
+
+.fv-picture {
+  width: 54%;
+}
+@media screen and (max-width: 600px) {
+  .fv-picture {
+    width: 100%;
+    position: relative;
+    height: 481px;
+  }
+}
+.fv-picture img {
+  width: 100%;
+  height: auto;
+}
+
+.concept {
+  width: 100%;
+  height: 26%;
+  background: linear-gradient(180deg, #A193861F 0%, #A193861F 45%, #A1938689 45%, #A1938689 100%);
+}
+@media screen and (max-width: 600px) {
+  .concept {
+    background: linear-gradient(180deg, #A193861F 0%, #A193861F 25%, #A1938689 25%, #A1938689 100%);
+  }
+}
+.concept-img {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.concept-text {
+  color: white;
+  display: flex;
+  padding-top: 5rem;
+  justify-content: space-around;
+}
+@media screen and (max-width: 600px) {
+  .concept-text {
+    flex-wrap: wrap;
+  }
+}
+.concept-subtitle {
+  font-size: 4rem;
+  font-family: "ヒラギノ明朝 Pro", serif;
+  width: 40%;
+  padding-top: 2.5rem;
+  min-width: 318px;
+}
+@media screen and (max-width: 600px) {
+  .concept-subtitle {
+    font-size: 1.8rem;
+    width: auto;
+    text-align: center;
+  }
+}
+.concept-item {
+  font-size: 1.6rem;
+  font-family: "ヒラギノ角ゴ Pro";
+  width: 36%;
+  padding-right: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .concept-item {
+    padding-top: 1.8rem;
+    padding-right: 0;
+  }
+}
+
+.left-img {
+  width: 63%;
+}
+.left-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.right-img {
+  width: 35%;
+}
+.right-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu {
+  height: 24%;
+}
+.menu-box {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto Mono for Powerline", serif;
+}
+@media screen and (max-width: 600px) {
+  .menu-box {
+    flex-wrap: wrap;
+  }
+}
+
+.mb {
+  width: 25%;
+  min-width: 183px;
+}
+@media screen and (max-width: 600px) {
+  .mb {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+.mb-img {
+  height: 27rem;
+}
+.mb-img img {
+  width: 100%;
+  height: 100%;
+}
+.mb-title {
+  font-family: Roboto Mono for Powerline;
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 3.7rem;
+}
+@media screen and (max-width: 600px) {
+  .mb-title {
+    text-align: left;
+  }
+}
+.mb-text {
+  font-size: 1.6rem;
+  padding-top: 3.4rem;
+}
+.mb-money {
+  text-align: right;
+  font-size: 1.6rem;
+  padding-top: 4rem;
+}
+@media screen and (max-width: 600px) {
+  .mb:nth-child(2), .mb:nth-child(3) {
+    padding-top: 5rem;
+  }
+}
+
+.access {
+  background-color: #A193861F;
+  height: 75.7rem;
+  position: relative;
+}
+@media screen and (max-width: 600px) {
+  .access {
+    height: 64.7rem;
+  }
+}
+.access-wrap {
+  width: 100%;
+  height: 52%;
+  display: flex;
+  position: absolute;
+  top: 42%;
+}
+@media screen and (max-width: 600px) {
+  .access-wrap {
+    height: auto;
+    flex-direction: column-reverse;
+    top: 12%;
+  }
+}
+
+.aw-left {
+  width: 40%;
+  background-color: #D0C5BA;
+  padding-top: 10rem;
+  padding-left: 10rem;
+}
+@media screen and (max-width: 600px) {
+  .aw-left {
+    height: 282px;
+    width: auto;
+    padding-top: 4rem;
+    padding-left: 4rem;
+  }
+}
+.aw-left-title {
+  font-weight: bold;
+  font-size: 2.4rem;
+  font-family: "Roboto Mono for Powerline", cursive;
+  color: #00000038;
+}
+.aw-right {
+  width: 60%;
+}
+@media screen and (max-width: 600px) {
+  .aw-right {
+    height: 230px;
+    width: auto;
+  }
+}
+.aw-right-img {
+  width: 100%;
+  height: 100%;
+}
+
+.access-text {
+  color: white;
+  font-size: 1.6rem;
+  font-family: "Roboto Mono for Powerline", serif;
+}
+.access-text-letter {
+  padding-top: 1.5rem;
+}
+.access-text-tel, .access-text-time, .access-text-holiday {
+  padding-top: 0.4rem;
+}
+
+.access .title {
+  position: absolute;
+  top: -4%;
+  left: 8.5%;
+}
+@media screen and (max-width: 600px) {
+  .access .title {
+    top: -4%;
+  }
+}
+
+footer {
+  height: 34rem;
+}
+@media screen and (max-width: 600px) {
+  footer {
+    height: auto;
+  }
+}
+
+.footer-text {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.footer-title {
+  color: #7070704D;
+  font-size: 3.2rem;
+  font-family: "Roboto Mono for Powerline";
+}
+@media screen and (max-width: 600px) {
+  .footer-title {
+    font-size: 18px;
+  }
+}
+
+.footer-title-wrap .fab {
+  color: black;
+  font-size: 2rem;
+}
+
+.footer-title-wrap {
+  width: 100%;
+  border-top: 1px solid #7070704D;
+  padding-top: 6rem;
+  margin-top: 17rem;
+}
+@media screen and (max-width: 600px) {
+  .footer-title-wrap {
+    padding-top: 13rem;
+    margin-top: 7rem;
+  }
+}
+
+.footer-title-wrap .fa-twitter {
+  padding-left: 2.6rem;
+}
+@media screen and (max-width: 600px) {
+  .footer-title-wrap .fa-twitter {
+    padding-left: 12.6rem;
+  }
+}
+
+.footer-title-wrap .fa-facebook-square {
+  padding-left: 1rem;
+}
+
+button {
+  width: 17%;
+  height: 3.7rem;
+  font-size: 1.8rem;
+  color: #707070;
+  background-color: #FFFFFF;
+  border: 1px solid #707070;
+  position: absolute;
+  top: 88%;
+  right: 0;
+}
+@media screen and (max-width: 600px) {
+  button {
+    width: 183px;
+    top: 50%;
+    right: 20%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

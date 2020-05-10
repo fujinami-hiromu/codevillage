@@ -1,0 +1,72 @@
+footer {
+    height: 34rem;
+    @include sp {
+        height: auto;
+    }
+}
+
+.footer {
+    &-text {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    &-title {
+        color: #7070704D;
+        font-size: 3.2rem;
+        font-family: "Roboto Mono for Powerline";
+        @include sp {
+            font-size: 18px;
+        }
+    }
+     
+}
+
+.footer-title-wrap .fab {
+    color: black;
+    font-size: 2rem;
+}
+
+.footer-title-wrap {
+    width: 100%;
+    border-top: 1px solid #7070704D;
+    padding-top: 6rem;
+    margin-top: 17rem;
+    @include sp {
+        padding-top: 13rem;
+        margin-top: 7rem;
+    }
+}
+
+.footer-title-wrap .fa-twitter {
+    padding-left: 2.6rem;
+    @include sp {
+        padding-left: 12.6rem;
+    }
+}
+
+.footer-title-wrap .fa-facebook-square {
+    padding-left: 1rem;
+}
+
+button {
+    width: 17%;
+    height: 3.7rem;
+    font-size: 1.8rem;
+    color: #707070;
+    background-color: #FFFFFF;
+    border: 1px solid #707070;
+    position: absolute;
+    top: 88%;
+    right: 0;
+    @include sp {
+        width: 183px;
+        top: 50%;
+        right: 20%;
+    }
+}
+    
+
+
+
+

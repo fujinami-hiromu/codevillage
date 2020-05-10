@@ -1,0 +1,62 @@
+////////////////
+///////mixin////
+////////////////
+@mixin pc {
+    @media screen and (min-width: 960px){
+      @content;
+    }
+}
+  
+@mixin tab {
+    @media screen and (max-width: 959px){
+      @content;
+    }
+}
+
+@mixin sp {
+    @media screen and (max-width: 600px){
+      @content;
+    }
+  }
+
+
+//////////////
+  //////共通  //
+/////////////
+
+html {
+    font-size: 62.5%;
+}
+  
+body {
+    font-size: 12px;
+    line-height: 1.67;
+}
+  
+.inner {
+    width: 100% - 8% * 2;//8%は両側の余白
+    // padding: 17rem 0 4.5rem;
+    padding-bottom: 4.5rem;
+    margin: 0 auto;
+}
+  
+.title {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 26rem;
+    font-size: 1.8rem;
+    color: #707070;
+    @include sp {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    &:after {
+      display: inline-block;
+      content: "";
+      border-top: 1px solid;
+      width: 4.5em;
+      margin-left: 2rem;
+    } 
+}
+  

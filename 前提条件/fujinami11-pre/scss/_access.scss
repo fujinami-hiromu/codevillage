@@ -1,0 +1,75 @@
+.access {
+    background-color: #A193861F;
+    height: 75.7rem;
+    position: relative;
+    @include sp {
+        height: 64.7rem;
+    }
+    
+    &-wrap {
+        width: 100%;
+        height: 52%;
+        display: flex;
+        position: absolute;
+        top: 42%;
+        @include sp {
+            height: auto;
+            flex-direction: column-reverse;
+            top: 12%;
+        }
+    }
+}
+.aw {
+    &-left {
+        width: 40%;
+        background-color: #D0C5BA;
+        padding-top: 10rem;
+        padding-left: 10rem;
+        @include sp {
+          height: 282px;
+          width: auto;
+          padding-top: 4rem;
+          padding-left: 4rem;
+        }
+        &-title {
+            font-weight: bold;
+            font-size: 2.4rem;
+            font-family: "Roboto Mono for Powerline", cursive ;
+            color: #00000038;
+        }
+    }
+    &-right {
+        width: 60%;
+        @include sp {
+            height: 230px;
+            width: auto;
+        }
+        &-img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.access-text {
+    color: white;
+    font-size: 1.6rem;
+    font-family: "Roboto Mono for Powerline", serif;
+    &-letter {
+      padding-top: 1.5rem;
+    }
+    &-tel,
+    &-time,
+    &-holiday {
+      padding-top: 0.4rem;
+    }  
+}
+
+.access .title {
+    position: absolute;
+    top: -4%;
+    left: 8.5%;
+    @include sp {
+        top: -4%;
+    }
+}
